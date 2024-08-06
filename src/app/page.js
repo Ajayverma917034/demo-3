@@ -1,4 +1,3 @@
-import ApnaZila from "@/components/ApnaZila";
 import NewsSection from "@/components/news-section/news.section.component";
 
 export default async function Page() {
@@ -43,7 +42,6 @@ export default async function Page() {
                 </div>
             </div>
 
-            <ApnaZila />
 
 
 

@@ -1,6 +1,8 @@
+import ApnaZila from "@/components/ApnaZila";
 import NewsSection from "@/components/news-section/news.section.component";
 
 export default async function Page() {
+    console.log("process.env.NEXT_PUBLIC_SERVER_DOMAIN", process.env.NEXT_PUBLIC_SERVER_DOMAIN)
     const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/news/home`, {
         method: 'POST',
         headers: {
@@ -23,7 +25,6 @@ export default async function Page() {
         news.data = [{ data: [], title: '' }, { data: [], title: '' }, { data: [], title: '' }, { data: [], title: '' }]
     }
 
-
     return (
         <main className="bg-red-200">
             <div className="flex spacing mt-2 ">
@@ -41,6 +42,8 @@ export default async function Page() {
                     </div>
                 </div>
             </div>
+
+            <ApnaZila />
 
 
 
